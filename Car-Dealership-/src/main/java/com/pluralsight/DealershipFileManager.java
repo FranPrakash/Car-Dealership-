@@ -20,13 +20,14 @@ public class DealershipFileManager {
                 lineFromFile = myScanner.nextLine(); //read one line from the file and store it in a string variable
                 Vehicle myVehicle = new Vehicle(lineFromFile); //calling a constructor in the Vehicle class which will split the string and parse the parts to get the vehicle details
                 myDealership.addVehicle(myVehicle); // add the vehicle object to the inventory of the dealership object
-            }
+            } myScanner.close();
 
         } catch (Exception e) {
             System.out.println("An unexpected error occurred");
             e.printStackTrace();
         }
         return null; //returning null because intelliJ suggested it
+
     }
 
 

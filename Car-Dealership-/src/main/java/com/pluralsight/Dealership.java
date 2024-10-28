@@ -84,8 +84,8 @@ public class Dealership {
         return null;
     }
 
-    public ArrayList<Vehicle> getAllVehiclesByType(String vehicleType) {
-        return null;
+    public ArrayList<Vehicle> getAllVehicles () {
+        return this.inventory; //Return this inventory because it holds rge list off all vehicles
     }
 
     //Stub method
