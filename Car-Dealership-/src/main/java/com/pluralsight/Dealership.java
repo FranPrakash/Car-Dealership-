@@ -10,15 +10,27 @@ public class Dealership {
 
     private ArrayList<Vehicle> inventory;
 
-//Constructor
+    //Constructor
     public Dealership(String address, String name, String phone) {
         this.address = address;
         this.name = name;
         this.phone = phone;
         // instantiate the arrayList<Vehicle> object in the constructor
-        this.inventory = new ArrayList<>();
+        this.inventory = new ArrayList<Vehicle>();
 
     }
+
+    //Constructor for phase 2 - Split the line
+    public Dealership(String fileInput) {
+        String[] parts = fileInput.split("\\|");
+        this.name = parts[0]; //this.name = Integer.parseInt(0)
+        this.address= parts[1];
+        this.phone = parts[2];
+// instantiate the arrayList<Vehicle> object in the constructor
+        this.inventory = new ArrayList<Vehicle>(); //Store vehicles
+
+    }
+
 
     //getters and setters
     public String getAddress() {
@@ -56,7 +68,7 @@ public class Dealership {
         return null;
     }
 
-    public ArrayList<Vehicle> getVehiclesByYears( int min, int max) {
+    public ArrayList<Vehicle> getVehiclesByYears(int min, int max) {
         return null;
     }
 
@@ -77,26 +89,13 @@ public class Dealership {
     }
 
     //Stub method
-    public void addVehicle (){
+    public void addVehicle(Vehicle myVehicle) {
 
     }
 
     //Stub method a method declaration with empty body between curly braces
-    public void removeVehicle (Vehicle vehicle){
+    public void removeVehicle(Vehicle myVehicle) {
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

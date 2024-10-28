@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class Vehicle {
 
-    private int vin;
+    private int vin; // Vehicle Identification Number
     private int year;
     private String make;
     private String model;
@@ -22,6 +22,21 @@ public class Vehicle {
         this.vin = vin;
         this.year = year;
     }
+
+    //Constructor phase 2
+    public Vehicle(String fileInput) {
+        String[] parts = fileInput.split("\\|");
+        this.vin = Integer.parseInt(parts[6]);   //sintax this.name = Integer.parseInt(0)
+        this.year = Integer.parseInt(parts[1]);
+        this.make = parts[2];
+        this.model = parts[3];
+        this.vehicleType = parts[4];
+        this.color = parts[5];
+        this.odometer = Integer.parseInt(parts[0]);
+        this.price = Double.parseDouble(parts[7]);
+
+    }
+
 
     //Getters and Setters
     public String getColor() {
